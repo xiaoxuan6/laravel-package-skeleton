@@ -30,7 +30,7 @@ class DatabaseTest extends TestCase
 
         $this->withFactories(__DIR__ . '/Factories/');
 
-        $this->seed(AuthorSeeder::class);
+//        $this->seed(AuthorSeeder::class);
     }
 
     /**
