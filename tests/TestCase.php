@@ -10,6 +10,7 @@
 namespace Vinhson\LaravelPackageSkeleton\Tests;
 
 use Illuminate\Foundation\Application;
+use Illuminate\Database\Schema\Blueprint;
 use Vinhson\LaravelPackageSkeleton\LaravelPackageSkeletonServiceProvider;
 
 abstract class TestCase extends \Orchestra\Testbench\TestCase
@@ -22,6 +23,8 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
     protected function setUp(): void
     {
         parent::setUp();
+
+//        $this->setUpDatabase();
     }
 
     /**
@@ -29,12 +32,26 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
      *
      * @param Application $app
      *
-     * @return array<int, class-string>
+     * @return array
      */
     protected function getPackageProviders($app): array
     {
         return [
             LaravelPackageSkeletonServiceProvider::class
         ];
+    }
+
+    /**
+     * @deprecated
+     */
+    private function setUpDatabase()
+    {
+        $this->app['db']->connection()->getSchemaBuilder()->dropIfExists('authors');
+
+        $this->app['db']->connection()->getSchemaBuilder()->create('authors', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->timestamps();
+        });
     }
 }

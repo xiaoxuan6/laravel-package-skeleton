@@ -21,7 +21,8 @@
     ],
     "require-dev": {
         "orchestra/testbench": "^7.0",
-        "friendsofphp/php-cs-fixer": "^3.6"
+        "friendsofphp/php-cs-fixer": "^3.6",
+        "laravel/legacy-factories": "1.x-dev"
     },
     "require": {
         "php": ">=7.2",
