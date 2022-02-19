@@ -42,21 +42,31 @@ class DatabaseTest extends TestCase
      */
     protected function getEnvironmentSetUp($app)
     {
-        $app['config']->set('database.default', 'mysql');
+//        $app['config']->set('database.default', 'mysql');
+//
+//        $app['config']->set('database.connections.mysql', [
+//            'driver' => 'mysql',
+//            'host' => '127.0.0.1',
+//            'port' => '3306',
+//            'database' => 'root',
+//            'username' => 'root',
+//            'password' => 'root',
+//            'prefix' => '',
+//        ]);
 
-        $app['config']->set('database.connections.mysql', [
-            'driver' => 'mysql',
-            'host' => '127.0.0.1',
-            'port' => '3306',
-            'database' => 'root',
-            'username' => 'root',
-            'password' => 'root',
+        $app['config']->set('database.default', 'sqlite');
+
+        $app['config']->set('database.connections.sqlite', [
+            'driver' => 'sqlite',
+            'database' => ':memory:',
             'prefix' => '',
         ]);
     }
 
     public function testAuthors()
     {
+        $this->seed(AuthorSeeder::class);
+
         $authors = Author::query()->get();
 
         $this->assertEquals(5, $authors->count());
