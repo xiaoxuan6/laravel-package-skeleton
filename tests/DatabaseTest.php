@@ -29,8 +29,6 @@ class DatabaseTest extends TestCase
         $this->loadMigrationsFrom(__DIR__ . '/migrations');
 
         $this->withFactories(__DIR__ . '/Factories/');
-
-//        $this->seed(AuthorSeeder::class);
     }
 
     /**
@@ -42,18 +40,6 @@ class DatabaseTest extends TestCase
      */
     protected function getEnvironmentSetUp($app)
     {
-//        $app['config']->set('database.default', 'mysql');
-//
-//        $app['config']->set('database.connections.mysql', [
-//            'driver' => 'mysql',
-//            'host' => '127.0.0.1',
-//            'port' => '3306',
-//            'database' => 'root',
-//            'username' => 'root',
-//            'password' => 'root',
-//            'prefix' => '',
-//        ]);
-
         $app['config']->set('database.default', 'sqlite');
 
         $app['config']->set('database.connections.sqlite', [
