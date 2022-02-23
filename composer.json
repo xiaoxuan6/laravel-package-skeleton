@@ -23,7 +23,8 @@
         "orchestra/testbench": "^4.0||^5.0||^6.0||^7.0",
         "friendsofphp/php-cs-fixer": "^3.0",
         "laravel/legacy-factories": "1.x-dev",
-        "mockery/mockery": "^1.5"
+        "mockery/mockery": "^1.5",
+        "phpstan/phpstan": "1.4.x-dev"
     },
     "require": {
         "php": ">=7.2.5",
@@ -39,10 +40,12 @@
     "minimum-stability": "dev",
     "scripts": {
         "test": "vendor/bin/phpunit --colors=always",
-        "fix-style": "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --using-cache=no --ansi"
+        "fix-style": "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --using-cache=no --ansi",
+        "phpstan": "vendor/bin/phpstan analyse"
     },
     "scripts-descriptions": {
         "test": "Run all tests.",
-        "fix-style": "Run style checks and fix violations."
+        "fix-style": "Run style checks and fix violations.",
+        "phpstan": "Run php static analysis tool."
     }
 }
