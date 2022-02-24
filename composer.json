@@ -24,7 +24,8 @@
         "friendsofphp/php-cs-fixer": "^3.0",
         "laravel/legacy-factories": "1.x-dev",
         "mockery/mockery": "^1.5",
-        "phpstan/phpstan": "1.4.x-dev"
+        "phpstan/phpstan": "1.4.x-dev",
+        "vimeo/psalm": "4.x-dev"
     },
     "require": {
         "php": ">=7.2.5",
