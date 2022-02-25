@@ -24,8 +24,7 @@
         "friendsofphp/php-cs-fixer": "^3.0",
         "laravel/legacy-factories": "1.x-dev",
         "mockery/mockery": "^1.5",
-        "phpstan/phpstan": "1.4.x-dev",
-        "vimeo/psalm": "4.x-dev"
+        "phpstan/phpstan": "1.4.x-dev"
     },
     "require": {
         "php": ">=7.2.5",
@@ -36,7 +35,8 @@
             "providers":[
                 "Vinhson\\LaravelPackageSkeleton\\LaravelPackageSkeletonServiceProvider"
             ]
-        }
+        },
+        "branch-alias": {}
     },
     "minimum-stability": "dev",
     "scripts": {
@@ -48,5 +48,16 @@
         "test": "Run all tests.",
         "fix-style": "Run style checks and fix violations.",
         "phpstan": "Run php static analysis tool."
-    }
+    },
+    "config": {
+        "platform": {
+            "php": "8.0"
+        },
+        "sort-packages": true
+    },
+    "repositories": [],
+    "suggest": {
+        "ext-openssl": "Required to support openssl"
+    },
+    "bin": []
 }
