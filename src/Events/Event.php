@@ -13,7 +13,7 @@ use Vinhson\LaravelPackageSkeleton\Models\Author;
 
 class Event
 {
-    public Author $author;
+    public $author;
 
     public function __construct(Author $author)
     {

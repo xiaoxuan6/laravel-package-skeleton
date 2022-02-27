@@ -10,7 +10,7 @@
 namespace Vinhson\LaravelPackageSkeleton\Tests\Seeder;
 
 use Illuminate\Database\Seeder;
-use Vinhson\LaravelPackageSkeleton\Tests\Models\Author;
+use Vinhson\LaravelPackageSkeleton\Models\Author;
 
 class AuthorSeeder extends Seeder
 {
@@ -21,6 +21,6 @@ class AuthorSeeder extends Seeder
      */
     public function run()
     {
-        factory(Author::class, 5)->create();
+        factory(AUthor::class, 5)->create();
     }
 }
