@@ -44,7 +44,8 @@
     "scripts": {
         "test": "vendor/bin/phpunit --colors=always",
         "fix-style": "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --using-cache=no --ansi",
-        "phpstan": "vendor/bin/phpstan analyse"
+        "phpstan": "vendor/bin/phpstan analyse --ansi",
+        "psalm": "./vendor/bin/psalm"
     },
     "scripts-descriptions": {
         "test": "Run all tests.",
@@ -55,7 +56,10 @@
         "platform": {
             "php": "8.0"
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true
+        }
     },
     "repositories": [],
     "suggest": {
