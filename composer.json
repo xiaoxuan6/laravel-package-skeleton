@@ -1,6 +1,8 @@
 {
     "name": "james.xue/laravel-package-skeleton",
     "description": "Laravel package template",
+    "keywords": [],
+    "homepage": "https://github.com/xiaoxuan6/laravel-package-skeleton.git",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -16,7 +18,8 @@
     "authors": [
         {
             "name": "xiaoxuan6",
-            "email": "1527736751@qq.com"
+            "email": "1527736751@qq.com",
+            "role": "Developer"
         }
     ],
     "require-dev": {
