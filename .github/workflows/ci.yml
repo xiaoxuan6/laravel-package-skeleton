@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: composer install
       - name: PHPCSFixer check
-        run: composer check-style
+        run: composer fix-style
   phpunit:
     strategy:
       matrix:
