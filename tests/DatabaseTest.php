@@ -11,7 +11,7 @@ namespace Vinhson\LaravelPackageSkeleton\Tests;
 
 use Exception;
 use Illuminate\Foundation\Application;
-use Vinhson\LaravelPackageSkeleton\Tests\Models\Author;
+use Vinhson\LaravelPackageSkeleton\Models\Author;
 use Vinhson\LaravelPackageSkeleton\Tests\Seeder\AuthorSeeder;
 
 class DatabaseTest extends TestCase

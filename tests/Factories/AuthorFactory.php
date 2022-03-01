@@ -8,7 +8,7 @@
  * with this source code in the file LICENSE.
  */
 use Faker\Generator as Faker;
-use Vinhson\LaravelPackageSkeleton\Tests\Models\Author;
+use Vinhson\LaravelPackageSkeleton\Models\Author;
 
 /*
 |--------------------------------------------------------------------------
