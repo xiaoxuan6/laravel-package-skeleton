@@ -53,9 +53,7 @@
         "phpstan": "Run php static analysis tool."
     },
     "config": {
-        "platform": {
-            "php": "8.0"
-        },
+        "platform": {},
         "sort-packages": true
     },
     "repositories": [],
