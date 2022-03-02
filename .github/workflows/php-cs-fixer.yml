@@ -1,4 +1,4 @@
-name: CI
+name: php-cs-fixer
 
 on:
   push:

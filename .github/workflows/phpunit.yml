@@ -7,9 +7,9 @@ on:
   pull_request:
     branches:
       - main
-#  预定的时间
-#  schedule:
-#    - cron: '0 0 * * *'
+  #  预定的时间
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   test:
@@ -18,11 +18,12 @@ jobs:
     strategy:
       matrix: # 构建矩阵
         php_version: [ 7.3, 8.0, 8.1 ]
+        #        extensions:  dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, mysql, mysqli, pdo_mysql, bcmath, soap, intl, gd, exif, iconv, imagick, fileinfo
         #        fail-fast: true # 默认为 true ，即一旦某个矩阵任务失败则立即取消所有还在进行中的任务。
         # max-paraller : 可同时执行的最大并发数，默认情况下 GitHub 会动态调整。
     #        include: # 使用特定的版本的矩阵环境
     #        exclude: # 删除特定的配置项
-    timeout-minutes: 360  #每个任务默认超时时间最长为 360 分钟，
+    #        timeout-minutes: 360  #每个任务默认超时时间最长为 360 分钟，
     steps:
       - name: Checkout
         uses: actions/checkout@v2
