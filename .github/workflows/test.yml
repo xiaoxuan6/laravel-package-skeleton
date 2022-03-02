@@ -7,14 +7,22 @@ on:
   pull_request:
     branches:
       - main
+#  预定的时间
+#  schedule:
+#    - cron: '0 0 * * *'
 
 jobs:
   test:
     name: phpunit Job
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest #  runner 即执行环境, 支持多个环境
     strategy:
-      matrix:
+      matrix: # 构建矩阵
         php_version: [7.3, 8.0, 8.1]
+#        fail-fast: true # 默认为 true ，即一旦某个矩阵任务失败则立即取消所有还在进行中的任务。
+        # max-paraller : 可同时执行的最大并发数，默认情况下 GitHub 会动态调整。
+#        include: # 使用特定的版本的矩阵环境
+#        exclude: # 删除特定的配置项
+    timeout-minutes: 360  #每个任务默认超时时间最长为 360 分钟，
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -31,3 +39,5 @@ jobs:
       - name: PHPUnit check
         run: ./vendor/bin/phpunit
 
+#  test1:
+#    needs: test # 多个 job 之间存在依赖关系
