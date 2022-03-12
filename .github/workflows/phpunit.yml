@@ -8,8 +8,8 @@ on:
     branches:
       - main
   #  预定的时间
-  schedule:
-    - cron: '0 0 * * *'
+  #schedule:
+    #- cron: '0 0 * * *'
 
 jobs:
   test:
