@@ -23,8 +23,8 @@
         <include>
             <directory suffix=".php">src/</directory>
         </include>
-<!--        <exclude>-->
-<!--            <file>src/LaravelPackageSkeletonServiceProvider.php</file>-->
-<!--        </exclude>-->
+        <!--        <exclude>-->
+        <!--            <file>src/LaravelPackageSkeletonServiceProvider.php</file>-->
+        <!--        </exclude>-->
     </coverage>
 </phpunit>
