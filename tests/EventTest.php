@@ -2,7 +2,7 @@
 /**
  * This file is part of PHP CS Fixer.
  *
- * (c) vinhson <15227736751@qq.com>
+ * (c) xiaoxuan6 <15227736751@qq.com>
  *
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
@@ -22,11 +22,11 @@ class EventTest extends DatabaseTest
         Event::fake();
     }
 
-    public function testEvent()
+    public function testEvent(): void
     {
         $author = Author::create(['name' => 'vinhson']);
 
-        Event::assertDispatched(BaseEvent::class, function (BaseEvent $event) use ($author) {
+        Event::assertDispatched(BaseEvent::class, function (BaseEvent $event) use ($author): bool {
             return $event->author->name === $author->name;
         });
 

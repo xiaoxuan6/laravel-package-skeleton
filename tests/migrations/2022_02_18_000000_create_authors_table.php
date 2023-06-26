@@ -2,7 +2,7 @@
 /**
  * This file is part of PHP CS Fixer.
  *
- * (c) vinhson <15227736751@qq.com>
+ * (c) xiaoxuan6 <15227736751@qq.com>
  *
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
@@ -18,9 +18,9 @@ class CreateAuthorsTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('authors', function (Blueprint $table) {
+        Schema::create('authors', function (Blueprint $table): void {
             $table->increments('id');
             $table->string('name');
             $table->timestamps();
@@ -32,7 +32,7 @@ class CreateAuthorsTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('authors');
     }

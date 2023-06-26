@@ -2,7 +2,7 @@
 /**
  * This file is part of PHP CS Fixer.
  *
- * (c) vinhson <15227736751@qq.com>
+ * (c) xiaoxuan6 <15227736751@qq.com>
  *
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
@@ -25,7 +25,7 @@ class LaravelPackageSkeletonServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         $this->publishes([
             dirname(__DIR__) . '/migrations/' => database_path('migrations'),
@@ -47,7 +47,7 @@ class LaravelPackageSkeletonServiceProvider extends ServiceProvider
      *
      * @see \Illuminate\Container\Container
      */
-    public function register()
+    public function register(): void
     {
     }
 

@@ -2,7 +2,7 @@
 /**
  * This file is part of PHP CS Fixer.
  *
- * (c) vinhson <15227736751@qq.com>
+ * (c) xiaoxuan6 <15227736751@qq.com>
  *
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
@@ -19,7 +19,7 @@ class AuthorSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         factory(AUthor::class, 5)->create();
     }
