@@ -14,7 +14,7 @@
     "homepage": "https://github.com/xiaoxuan6/laravel-package-skeleton.git",
     "require": {
         "php": "^8.0",
-        "laravel/framework": "^10.0"
+        "laravel/framework": "^10.0 || ^10.0"
     },
     "require-dev": {
         "james.xue/packet": "dev-main",
