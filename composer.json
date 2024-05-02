@@ -1,10 +1,36 @@
 {
     "name": "james.xue/laravel-package-skeleton",
     "description": "Laravel package template",
-    "keywords": [],
-    "homepage": "https://github.com/xiaoxuan6/laravel-package-skeleton.git",
-    "type": "library",
     "license": "MIT",
+    "type": "library",
+    "keywords": [],
+    "authors": [
+        {
+            "name": "xiaoxuan6",
+            "email": "1527736751@qq.com",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/xiaoxuan6/laravel-package-skeleton.git",
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^10.0"
+    },
+    "require-dev": {
+        "james.xue/packet": "dev-main",
+        "laravel/legacy-factories": "^1.0@dev",
+        "orchestra/testbench": "8.x-dev"
+    },
+    "suggest": {
+        "ext-openssl": "Required to support openssl"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/xiaoxuan6/packet"
+        }
+    ],
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Vinhson\\LaravelPackageSkeleton\\": "src/"
@@ -15,60 +41,36 @@
             "Vinhson\\LaravelPackageSkeleton\\Tests\\": "tests/"
         }
     },
-    "authors": [
-        {
-            "name": "xiaoxuan6",
-            "email": "1527736751@qq.com",
-            "role": "Developer"
-        }
-    ],
-    "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.0",
-        "laravel/legacy-factories": "1.x-dev",
-        "mockery/mockery": "~1.3||~1.4||^1.5",
-        "orchestra/testbench": "^4.0||^5.0||^6.0||^7.0",
-        "phpunit/phpunit": "^8.0 || ^9.0",
-        "rector/rector": "^0.17.0 || ^1.0.0",
-        "vimeo/psalm": "^4.16 || ^4.0"
-    },
-    "require": {
-        "php": ">=7.3",
-        "laravel/framework": "^6.0||^7.0||^8.0||^9.0||^10||^11"
+    "bin": [],
+    "config": {
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true,
+            "ergebnis/composer-normalize": true
+        },
+        "sort-packages": true
     },
     "extra": {
+        "branch-alias": [],
         "laravel": {
-            "providers":[
+            "providers": [
                 "Vinhson\\LaravelPackageSkeleton\\LaravelPackageSkeletonServiceProvider"
             ]
-        },
-        "branch-alias": {}
+        }
     },
-    "minimum-stability": "dev",
     "scripts": {
-        "test": "vendor/bin/phpunit --colors=always",
-        "pint": "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --using-cache=no --ansi",
-        "psalm": "./vendor/bin/psalm",
-        "rector": "vendor/bin/rector process --clear-cache --no-diffs --ansi",
         "fix": [
             "@rector",
             "@pint"
-        ]
+        ],
+        "pint": "vendor/bin/php-cs-fixer fix --config=vendor/james.xue/packet/.php-cs-fixer.php --using-cache=no --ansi",
+        "psalm": "./vendor/bin/psalm",
+        "rector": "vendor/bin/rector process --config=vendor/james.xue/packet/rector.php --no-diffs --ansi",
+        "test": "vendor/bin/phpunit --colors=always",
+        "unused": "vendor/bin/composer-unused --ansi -v"
     },
     "scripts-descriptions": {
-        "test": "Run all tests.",
+        "phpstan": "Run php static analysis tool.",
         "print": "Run style checks and fix violations.",
-        "phpstan": "Run php static analysis tool."
-    },
-    "config": {
-        "platform": {},
-        "sort-packages": true,
-        "allow-plugins": {
-            "composer/package-versions-deprecated": true
-        }
-    },
-    "repositories": [],
-    "suggest": {
-        "ext-openssl": "Required to support openssl"
-    },
-    "bin": []
+        "test": "Run all tests."
+    }
 }

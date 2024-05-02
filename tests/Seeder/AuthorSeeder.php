@@ -1,12 +1,15 @@
 <?php
-/**
- * This file is part of PHP CS Fixer.
+
+/*
+ * This file is part of james.xue/laravel-package-skeleto.
  *
  * (c) xiaoxuan6 <1527736751@qq.com>
  *
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.
+ *
  */
+
 namespace Vinhson\LaravelPackageSkeleton\Tests\Seeder;
 
 use Illuminate\Database\Seeder;
@@ -21,6 +24,6 @@ class AuthorSeeder extends Seeder
      */
     public function run(): void
     {
-        factory(AUthor::class, 5)->create();
+        factory(Author::class, 5)->create();
     }
 }
